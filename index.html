@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>fill this form for your better experience</h1>
+    <div class="status">
+        
+        <form action="https://sheetdb.io/api/v1/mj5ptsqd4ykjk" method="post" id="sheetdb-form">
+            <h4>Forms</h4>
+            <input type="text" name="name" placeholder="Enter the name">
+            <input type="email" name="email" placeholder="Enter email address">
+            <input type="password" name="password" placeholder="Enter password ">
+            
+            <div id="choice">
+                <input type="date" name="date" placeholder="Enter the date">
+            <input type="time" name="time" placeholder="Enter the time">
+           
+            </div>
+            <div id="choice">
+                <input type="text" name="info" placeholder="Enter the text">
+                check the bok<input type="checkbox" name="checkbox">
+               
+            </div>
+            <div id="choice">
+                male<input type="radio" >  female<input type="radio" >
+            </div>
+            <input type="submit" name="submit" value="Submit">
+
+        </form>
+    </div>
+
+        <script>
+            var form =document .getElementById('sheetdb-form');
+            form.addEventListener("submit",(e)=>{
+                e.preventDefault();
+                fetch(form.action,
+                {
+                    method:"POST",
+                    body:new FormData(document.getElementById("sheetdb-form")),
+                }).then((html)=>{
+                    window.open('signup.html','_blank');
+                });
+            });
+        </script>
+    
+</body>
+</html>

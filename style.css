@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-color: black; */
+    background: linear-gradient(45deg,yellow,blue);
+}
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* border-radius: 25px; */
+    border: 3px solid red;
+    background:linear-gradient(45deg ,rgb(13, 178, 197),green);
+}
+.status{
+    padding-top: 10vh;
+    height:65vh ;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    
+    height: 60vh;
+    width:30vw;
+    color: white;
+    opacity: 0.8;
+    background: linear-gradient(to right,gray,black,black,black,black,black,black,black,black,black,black,gray);
+    box-shadow:25px 25px rgb(72, 74, 74) ;
+    border: 2px solid rgb(16, 217, 248);
+    opacity: 0.9;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 45px green;
+    /* animation: dance 1s 5 ; */
+    /* animation: transla 1s 5 ; */
+}
+#choice{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+#choice>input{
+   padding: 5px;
+   
+    margin: 5px;
+    
+}
+/* this is for responsive ness */
+@media (max-width: 480px) {
+    form{
+        width: 80vw;
+    }
+}
+form>input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+    border: 2px solid rgb(148, 31, 180);
+}
+
+@keyframes dance {
+    0%{
+        border: 4px solid rgb(13, 198, 149);
+        transform: rotate(50deg);
+        
+    }
+    25%{
+        border: 4px solid rgb(207, 10, 252);
+        transform: rotate(120deg);
+    }
+    50%{
+        border: 4px solid rgb(132, 245, 12);
+        transform: rotate(210deg);
+    }
+    75%{
+        border: 4px solid rgb(245, 26, 157);
+        transform: rotate(300deg);
+    }
+    100%{
+        border: 4px solid rgb(179, 138, 72);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes transla
+{
+    0%{
+        border: 4px solid rgb(13, 198, 149);
+       transform: translateX(-65vw);
+    }
+    25%{
+        border: 4px solid rgb(207, 10, 252);
+        transform: translateX(-20vw);
+    }
+    50%{
+        border: 4px solid rgb(132, 245, 12);
+        transform: translateX(0vw);
+    }
+    75%{
+        border: 4px solid rgb(245, 26, 157);
+        transform: translateX(45vw);
+    }
+    100%{
+        border: 4px solid rgb(179, 138, 72);
+        transform: translateX(65vw);
+    }
+
+}
